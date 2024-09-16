@@ -2,7 +2,7 @@
   "name": "devcamp-capstone-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://garaziLS.github.io/Home-of-Imagination",
+  "homepage": "https://garaziLS.github.io/Home-of-Imagination/#",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.6.0",
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
