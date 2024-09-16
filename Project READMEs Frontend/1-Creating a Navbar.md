@@ -12,6 +12,10 @@ The site is fully responsive. Some pages, such as the login or the generators, d
 
 * When seeing the page from the responsive mobile view in Chrome, the log in gets refused. Exit the console and log in from the outside to fix the bug.
 
+* Don't panic if the data doesn't load right away, wait a little.
+
+* iOS phones can't display the web properly despite media queries. Tests confirmed that Androids run it as it should though.
+
 
 ## First Steps: Building a Navbar
 
