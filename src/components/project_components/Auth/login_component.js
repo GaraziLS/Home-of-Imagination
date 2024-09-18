@@ -37,7 +37,7 @@ export default class LoginComponent extends Component {
             user_password: this.state.password
         }, { withCredentials: true })
             .then(response => {
-                console.log(response);
+                console.log(response.data);
                 if (response.status === 200) {
                     this.props.handleSuccessfulLoginAuth();
                 }
