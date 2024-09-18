@@ -74,7 +74,7 @@ export default class LoginComponent extends Component {
         return (
             <div className="login-wrapper">
                 <h2 className="header">Log in</h2>
-                <h3><div>{this.state.errorText}</div></h3>
+                <div><h3>{this.state.errorText}</h3></div>
 
                 <form onSubmit={this.handleSubmit} className="auth-form">
                     
