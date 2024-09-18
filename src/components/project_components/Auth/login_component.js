@@ -39,6 +39,7 @@ export default class LoginComponent extends Component {
             .then(response => {
                 console.log("Full Response:", response); // Log the whole response object
                 console.log("Response Data:", response.data); // Log just the response data
+                console.log("Login Successful")
                 if (response.status === 200) {
                     this.props.handleSuccessfulLoginAuth();
                 }
