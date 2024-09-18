@@ -60,6 +60,7 @@ export default class LoginComponent extends Component {
                         errorText: "No response from the server. Please check your connection and try again."
                     });
                 } else {
+                    console.log(error.request)
                     // Something happened in setting up the request that triggered an Error
                     this.setState({
                         errorText: "An error occurred while setting up the request. Please try again."
