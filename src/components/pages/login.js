@@ -13,7 +13,7 @@ export default class Login extends Component {
         this.props.handleSuccessfulLogin();
 
         // redirect user to home page
-        this.props.history.push('/');
+        this.props.history.push('/tables');
     }
 
     handleUnsuccessfulLoginAuth() {
