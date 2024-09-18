@@ -10,6 +10,7 @@ export default class Login extends Component {
     }
 
     handleSuccessfulLoginAuth() {
+    console.log("handleSuccessfulLoginAuth Called");
         this.props.handleSuccessfulLogin();
 
         // redirect user to home page
