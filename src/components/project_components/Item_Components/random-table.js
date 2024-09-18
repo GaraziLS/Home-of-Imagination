@@ -27,7 +27,7 @@ export default class RandomTable extends Component {
     };
 
     componentDidMount() {
-        this.getTable(this.props.match.params.slug);
+        this.getTable(this.props.slug);
     }
 
     render() {

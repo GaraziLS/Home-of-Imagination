@@ -7,7 +7,7 @@ import CreatePage from "./components/pages/create";
 import ErrorPage from "./components/pages/error-page";
 import SignupPage from "./components/pages/signup";
 import LoginPage from "./components/pages/login";
-import RandomTable from "./components/project_components/Item_Components/random-table"
+import RandomTableSlug from "./components/project_components/Item_Components/random-table-slug"
 import ProfilePage from "./components/pages/user-profile"
 
 import Navbar from "./components/project_components/navbar";
@@ -66,7 +66,7 @@ export default class App extends Component {
               handleSuccessfulLogin={this.handleSuccessfulLogin} 
               handleUnsuccessfulLogin={this.handleUnsuccessfulLogin} 
             />} />
-            <Route path="/tables/:slug" element={<RandomTable />} />
+            <Route path="/tables/:slug" element={<RandomTableSlug />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
       </div>
