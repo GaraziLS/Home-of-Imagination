@@ -32,7 +32,7 @@ export default class LoginComponent extends Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        axios.post('https://devcamp-capstone-backend-backup.onrender.com/login', {
+        axios.post('https://localhost:3000/login', {
             user_name: this.state.username,
             user_password: this.state.password
         }, { withCredentials: true })
@@ -43,29 +43,25 @@ export default class LoginComponent extends Component {
             })
             .catch(error => {
                 if (error.response) {
-                    // The request was made and the server responded with a status code
-                    // that falls out of the range of 2xx
-                    if (error.response.status === 401) {
-                        this.setState({
-                            errorText: "Wrong username or password"
-                        });
-                    } else {
-                        this.setState({
-                            errorText: "An error occurred. Please try again later."
-                        });
-                    }
-                } else if (error.request) {
-                    // The request was made but no response was received
-                    this.setState({
-                        errorText: "No response from the server. Please check your connection and try again."
-                    });
-                } else {
-                    console.log(error.request)
-                    // Something happened in setting up the request that triggered an Error
-                    this.setState({
-                        errorText: "An error occurred while setting up the request. Please try again."
-                    });
-                }
+            // The server responded with a status code outside the 2xx range
+            console.log('Error response data:', error.response.data);
+            console.log('Error response status:', error.response.status);
+            console.log('Error response headers:', error.response.headers);
+
+            if (error.response.status === 401) {
+                this.setState({ errorText: 'Wrong username or password' });
+            } else {
+                this.setState({ errorText: 'An error occurred. Please try again later.' });
+            }
+        } else if (error.request) {
+            // The request was made but no response was received
+            console.log('Error request:', error.request);
+            this.setState({ errorText: 'No response from the server. Please check your connection and try again.' });
+        } else {
+            // An error occurred while setting up the request
+            console.log('Error message:', error.message);
+            this.setState({ errorText: 'An error occurred while setting up the request. Please try again.' });
+        }
                 this.props.handleUnsuccessfulLoginAuth();
             });
     }

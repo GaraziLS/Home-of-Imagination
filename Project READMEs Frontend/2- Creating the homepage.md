@@ -149,7 +149,7 @@ this.state = {
 
 ```
 getAllTables() {
-        axios.get("https://devcamp-capstone-backend-backup.onrender.com/tables")
+        axios.get("https://localhost:3000/tables")
             .then(response => {
                 this.setState({ data: response.data, isLoading: false })
             }).catch(error => {

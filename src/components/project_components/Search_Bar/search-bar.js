@@ -12,7 +12,7 @@ const SearchBar = () => {
     useEffect(() => {
         const getData = async () => {
             try {
-                const response = await axios.get("https://devcamp-capstone-backend-backup.onrender.com/tables");
+                const response = await axios.get("https://localhost:3000/tables");
                 setData(response.data);
                 setFilteredData(response.data);
             } catch (error) {

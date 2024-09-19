@@ -13,7 +13,7 @@ root.render(
   </HashRouter>
 );
 
-const url = `https://devcamp-capstone-backend-backup.onrender.com/`; // Replace with your Render URL
+const url = `https://localhost:3000/`; // Replace with your Render URL
 const interval = 30000; // Interval in milliseconds (30 seconds)
 
   function reloadWebsite() {

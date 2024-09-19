@@ -12,7 +12,7 @@ export default class GeneratorForm extends Component {
             item_category: "Characters",
             item_content: "",
             editMode: false,
-            apiUrl: "https://devcamp-capstone-backend-backup.onrender.com/create",
+            apiUrl: "https://localhost:3000/create",
             apiAction: "post"
         };
 
@@ -32,7 +32,7 @@ export default class GeneratorForm extends Component {
                 item_category: this.props.handleEditItem.item_category || "",
                 item_content: this.props.handleEditItem.item_content || "",
                 editMode: true,
-                apiUrl: `https://devcamp-capstone-backend-backup.onrender.com/tables/${this.props.handleEditItem.item_id}`,
+                apiUrl: `https://localhost:3000/tables/${this.props.handleEditItem.item_id}`,
                 apiAction: "put"
             });
 
@@ -82,7 +82,7 @@ export default class GeneratorForm extends Component {
                     item_category: "Characters",
                     item_content: "",
                     editMode: false,
-                    apiUrl: "https://devcamp-capstone-backend-backup.onrender.com/create",
+                    apiUrl: "https://localhost:3000/create",
                     apiAction: "post"
                 });
             })
