@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react';s
+
 import LoginComponent from '../project_components/Auth/login_component';
 import LoginHelper from "../project_components/Auth/login-helper";
 
@@ -12,7 +13,6 @@ class Login extends Component {
 
     handleSuccessfulLoginAuth() {
         this.props.handleSuccessfulLogin();
-
         // redirect user to any route we want
         this.props.navigate('/create');
     }
