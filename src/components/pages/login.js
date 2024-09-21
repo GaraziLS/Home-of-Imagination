@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import LoginComponent from '../project_components/Auth/login_component';
-import LoginHelper from "./login-helper";
+import LoginHelper from "../project_components/Auth/login-helper";
 
 class Login extends Component {
     constructor(props) {

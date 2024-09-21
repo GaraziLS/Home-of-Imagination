@@ -1,9 +1,9 @@
 import { useNavigate } from 'react-router-dom';
 
-function LoginHelper(Component) {
+function LoginHelper(WrappedComponent) {
     return function(props) {
         const navigate = useNavigate();
-        return <Component {...props} navigate={navigate} />;
+        return <WrappedComponent {...props} navigate={navigate} />;
     };
 }
 
