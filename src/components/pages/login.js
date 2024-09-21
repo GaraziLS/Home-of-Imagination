@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import LoginComponent from '../project_components/Auth/login_component';
+import LoginHelper from "./login-helper";
 
-export default class Login extends Component {
+class Login extends Component {
     constructor(props) {
         super(props);
 
@@ -12,7 +13,7 @@ export default class Login extends Component {
     handleSuccessfulLoginAuth() {
         this.props.handleSuccessfulLogin();
 
-        // redirect user to home page
+        // redirect user to any route we want
         this.props.navigate('/create');
     }
 
@@ -30,3 +31,5 @@ export default class Login extends Component {
         );
     };
 }
+
+export default LoginHelper(Login);
