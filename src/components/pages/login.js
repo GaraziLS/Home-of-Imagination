@@ -1,34 +1,27 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import LoginComponent from '../project_components/Auth/login_component';
-import LoginHelper from "../project_components/Auth/login-helper";
 
-class Login extends Component {
-    constructor(props) {
-        super(props);
+const Login = (props) => {
+    const navigate = useNavigate(); // Get the navigate function
 
-        this.handleSuccessfulLoginAuth = this.handleSuccessfulLoginAuth.bind(this);
-        this.handleUnsuccessfulLoginAuth = this.handleUnsuccessfulLoginAuth.bind(this);
-    }
-
-    handleSuccessfulLoginAuth() {
-        this.props.handleSuccessfulLogin();
-        // redirect user to any route we want
-        this.props.navigate('/create');
-    }
-
-    handleUnsuccessfulLoginAuth() {
-        this.props.handleUnsuccessfulLogin();
-    }
-
-    render() {
-        return (
-            <div>
-                <LoginComponent
-                    handleSuccessfulLoginAuth={this.handleSuccessfulLoginAuth}
-                    handleUnsuccessfulLoginAuth={this.handleUnsuccessfulLoginAuth} />
-            </div>
-        );
+    const handleSuccessfulLoginAuth = () => {
+        props.handleSuccessfulLogin();
+        navigate('/create'); // Use navigate here
     };
-}
 
-export default LoginHelper(Login);
+    const handleUnsuccessfulLoginAuth = () => {
+        props.handleUnsuccessfulLogin();
+    };
+
+    return (
+        <div>
+            <LoginComponent
+                handleSuccessfulLoginAuth={handleSuccessfulLoginAuth}
+                handleUnsuccessfulLoginAuth={handleUnsuccessfulLoginAuth}
+            />
+        </div>
+    );
+};
+
+export default Login;
