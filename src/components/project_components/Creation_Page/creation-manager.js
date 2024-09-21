@@ -34,7 +34,7 @@ export default class CreationManager extends Component {
     }
 
     handleDeleteItem(item) {
-        axios.delete(`https://localhost:5000/tables/${item.item_id}`, { withCredentials: true })
+        axios.delete(`https://devcamp-capstone-backend-backup.onrender.com/tables/${item.item_id}`, { withCredentials: true })
             .then(_response => {
                 this.setState({
                     randomGeneratorList: this.state.randomGeneratorList.filter(i => i.item_id !== item.item_id)
@@ -61,7 +61,7 @@ export default class CreationManager extends Component {
     }
 
     getRandomTables() {
-        axios.get('https://localhost:5000/tables', { withCredentials: true })
+        axios.get('https://devcamp-capstone-backend-backup.onrender.com/tables', { withCredentials: true })
             .then(response => {
                 this.setState({
                     randomGeneratorList: [...response.data]
